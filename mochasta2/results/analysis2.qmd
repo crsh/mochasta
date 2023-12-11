@@ -1,0 +1,89 @@
+---
+title: "Analysis of Experiment 2"
+author: "Frederik Aust"
+date: "`r Sys.Date()`"
+
+toc: true
+number-sections: true
+reference-location: margin
+
+highlight-style: github
+theme: lumen
+
+execute:
+  keep-md: true
+
+format:
+  html:
+    code-fold: true
+    standalone: true
+    embed-resources: true
+    self-contained: true
+    link-external-icon: true
+    citations-hover: true
+    footnotes-hover: true
+---
+
+```{r}
+#| label: init
+#| include: false
+
+library("targets")
+library("BayesFactor")
+library("dplyr")
+
+tested_terms <- function(x, denominator = length(x)) {
+  lapply(
+    x@numerator
+    , \(y) {
+      BayesFactor:::whichOmitted(
+        y
+        , x@denominator
+      )
+    }
+  ) |>
+  unlist(use.names = FALSE)
+}
+
+bf_table <- function(x) {
+  x <-  do.call(c, args = x)
+  
+  x <- x[-length(x)] / x[length(x)]
+
+  extractBF(x, logbf = TRUE) |>
+    tibble() |>
+    mutate(
+      term = tested_terms(x)
+      , bf = exp(-bf)
+    ) |>
+    select(term, bf, error)
+}
+```
+
+# Full ANOVA
+
+ANOVA: 3 (sound condition) x 2 (task modality) x 7 (serial position) x 2 (task order)
+
+```{r}
+#| label: anova-full
+
+mochasta2_anova <- tar_read(mochasta2_anova)
+
+mochasta2_anova
+mochasta2_anova$Anova
+
+tar_read(mochasta2_anova_bf) |>
+  bf_table()
+```
+
+
+# Simple effects of state changes per task modalitiy
+
+```{r}
+#| label: simple-effects
+
+tar_read(mochasta2_simple_effects_spatial)
+tar_read(mochasta2_simple_effects_verbal)
+tar_read(mochasta2_simple_effects_bf)
+```
+

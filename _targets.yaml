@@ -1,0 +1,11 @@
+mochasta1:
+  reporter_make     : "verbose" # "summary"
+  reporter_outdated : "forecast"
+  script            : "mochasta1/results/targets.r"
+  store             : "mochasta1/results/_targets"
+  workers           : "4"
+
+mochasta2:
+  inherits          : "mochasta1"
+  script            : "mochasta2/results/targets.r"
+  store             : "mochasta2/results/_targets"

@@ -11,7 +11,8 @@ AutoAppendNewline: Yes
 StripTrailingWhitespace: Yes
 LineEndingConversion: Posix
 
-BuildType: Package
+BuildType: Custom
+CustomScriptPath: _make.sh
 PackageUseDevtools: Yes
 PackageInstallArgs: --no-multiarch --with-keep.source
 PackageRoxygenize: rd,collate,namespace

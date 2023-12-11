@@ -5,8 +5,7 @@ Authors@R:
     person("Frederik", "Aust", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-4900-788X"))
 Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+License: CC BY 4.0
 Encoding: UTF-8
 Language: en
 Roxygen: list(markdown = TRUE)
@@ -14,3 +13,7 @@ RoxygenNote: 7.2.3
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Imports: 
+    rlang,
+    tarchetypes,
+    targets

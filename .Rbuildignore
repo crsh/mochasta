@@ -1,2 +1,9 @@
 ^mochasta\.Rproj$
 ^\.Rproj\.user$
+^_targets\.yaml$
+^_make\.sh$
+^mochasta\d+$
+^paper$
+^talks_posters$
+^grants$
+^LICENSE\.md$
