@@ -1,26 +1,22 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-.Random.seed|object|a5258f44debfc931|||||||||||||||
+.Random.seed|object|0fb7bfd337a71c7e|||||||||||||||
 list_type3_models|function|5c80861282e2951f|||||||||||||||
-mochasta2|stem|6ff6f506ddf5ea48|c51df277ab2b1725|a1b4749eeaa0e12f|-1183851396||t19696.4536415744s|3c64c759cb141eb1|4150|rds|local|vector|||2.076||
-mochasta2_anova|stem|fd2ac1c19d49714d|aaee3a86219fd1b7|b9752a660b843bd7|1883054104||t19696.4536511026s|7ee3c6c9ffadff0f|106921|rds|local|vector|||0.038||
-mochasta2_anova_bf|pattern|6a1ca688f5a5a719|f99321cc2589e287||1646227611||||38486|rds|local|list||mochasta2_anova_bf_a37ea7b6*mochasta2_anova_bf_f7281ad7*mochasta2_anova_bf_db8fa101*mochasta2_anova_bf_215e91ce*mochasta2_anova_bf_bde6ffcb*mochasta2_anova_bf_5df8ab36*mochasta2_anova_bf_4aafdf09*mochasta2_anova_bf_1e98d7c1|424.181||
-mochasta2_anova_bf_1e98d7c1|branch|792a7aff17aceaf6|f99321cc2589e287|49a6cefe02c1f199|-1064826834||t19696.9438043696s|660104f3730fc92c|4809|rds|local|list|mochasta2_anova_bf||57.536|data coerced from tibble to data frame|
-mochasta2_anova_bf_215e91ce|branch|992956a37c6eca55|f99321cc2589e287|0b9107c0ee61d880|-1352871958||t19696.943795514s|2ac219487e587bba|4812|rds|local|list|mochasta2_anova_bf||52.667|data coerced from tibble to data frame|
-mochasta2_anova_bf_4aafdf09|branch|a828ca038ed7d405|f99321cc2589e287|879c98db318478b6|1915727663||t19696.9442393521s|55af6b4c6658de65|4814|rds|local|list|mochasta2_anova_bf||36.947|data coerced from tibble to data frame|
-mochasta2_anova_bf_5df8ab36|branch|06c379b7f3cd5886|f99321cc2589e287|ad1d306f547d0eb3|683703709||t19696.9442630434s|21e317b3a56c0cd7|4813|rds|local|list|mochasta2_anova_bf||40.086|data coerced from tibble to data frame|
-mochasta2_anova_bf_a37ea7b6|branch|4c5f1d0e8a9e67e4|f99321cc2589e287|7ea8bca8988f5f3e|684200579||t19696.9432138773s|f26a841634ae25ec|4810|rds|local|list|mochasta2_anova_bf||64.581|data coerced from tibble to data frame|
-mochasta2_anova_bf_bde6ffcb|branch|f847339ce4546e00|f99321cc2589e287|1c9292a810ff4b72|1344772570||t19696.9438334116s|f26a841634ae25ec|4810|rds|local|list|mochasta2_anova_bf||53.213|data coerced from tibble to data frame|
-mochasta2_anova_bf_db8fa101|branch|39da9de10c7b26e8|f99321cc2589e287|2c635fece5086f95|716565383||t19696.9431353897s|d91b9512c992ff17|4806|rds|local|list|mochasta2_anova_bf||57.463|data coerced from tibble to data frame|
-mochasta2_anova_bf_f7281ad7|branch|129940ba3576ec55|f99321cc2589e287|c7ae0311a076726f|1568833176||t19696.9431827466s|2ac219487e587bba|4812|rds|local|list|mochasta2_anova_bf||61.688|data coerced from tibble to data frame|
-mochasta2_anova_models|stem|170eb51baef85dda|428e7d0e082b54bc|c588278c3e63572c|854771886||t19696.4536534829s|5529749806a42e69|653|rds|local|vector||mochasta2_anova_models_63482633*mochasta2_anova_models_5dcecc13*mochasta2_anova_models_2e92347a*mochasta2_anova_models_5ee5a28c*mochasta2_anova_models_fb6171e3*mochasta2_anova_models_e44b6ce3*mochasta2_anova_models_18d97bd4*mochasta2_anova_models_fbcf78b3|0.041||
-mochasta2_lmm|stem|925550e5c0bc4cdb|738e39576cb00c7c|95f363507e5fb885|1334306399||t19696.4546191601s|40a79fef214bf134|752890|rds|local|vector|||83.149|Model failed to converge with 2 negative eigenvalues 4.7e03 8.9e00|
-mochasta2_no_position|stem|996caab1d9b0b3ad|699766911ce9fe35|02134fbff5ecdb5c|1404452198||t19696.4536439074s|21a2bce103388539|1461|rds|local|vector|||0.018||
-mochasta2_simple_effects_bf|stem|eabea6850b9a3e10|699001fee4ccb11d|2519131eaa427bd0|-862119223||t19696.9479215571s|7109262deedf9325|229|rds|local|vector|||1.905||
-mochasta2_simple_effects_spatial|stem|360c14039bd024d8|6a81687ee49a2b8d|4ea266cc319504d0|339468056||t19696.9479378236s|77978d87bc21294f|8063|rds|local|vector|||0.981||
-mochasta2_simple_effects_verbal|stem|5f7ea0aa830c785e|9413bfd1250025ae|4ea266cc319504d0|-1225459199||t19696.9479405635s|c6a8b9ed433db076|8003|rds|local|vector|||0.021||
-mochsata2_simple_effects_bf|stem|eabea6850b9a3e10|699001fee4ccb11d|2519131eaa427bd0|-707320438||t19696.9463550492s|7109262deedf9325|229|rds|local|vector|||2.001||
-mochsata2_simple_effects_spatial|stem|360c14039bd024d8|6a81687ee49a2b8d|4ea266cc319504d0|-46996673||t19696.4536482913s|77978d87bc21294f|8063|rds|local|vector|||0.012||
-mochsata2_simple_effects_verbal|stem|5f7ea0aa830c785e|9413bfd1250025ae|4ea266cc319504d0|387409880||t19696.4536462009s|c6a8b9ed433db076|8003|rds|local|vector|||0.029||
-mochsata2_simple_effects_verbal_bf|stem|eabea6850b9a3e10|699001fee4ccb11d|2519131eaa427bd0|1099857368||t19696.4546220155s|7109262deedf9325|229|rds|local|vector|||0.032||
+mochasta2|stem|6ff6f506ddf5ea48|c51df277ab2b1725|ef46db3751d8e999|-1183851396||t19704.8206426601s|3c64c759cb141eb1|4150|rds|local|vector|||1.112||
+mochasta2_anova|stem|10de990007c3b6c3|aaee3a86219fd1b7|7c07701a3db73078|1883054104||t19704.8206450213s|297edfe53acc2a14|106744|rds|local|vector|||0.037||
+mochasta2_anova_bf|pattern|f79d9a69c8060ced|389f66241f005792||1646227611||||38892|rds|local|list||mochasta2_anova_bf_a37ea7b6*mochasta2_anova_bf_f7281ad7*mochasta2_anova_bf_db8fa101*mochasta2_anova_bf_215e91ce*mochasta2_anova_bf_bde6ffcb*mochasta2_anova_bf_5df8ab36*mochasta2_anova_bf_4aafdf09*mochasta2_anova_bf_1e98d7c1|211993.812||
+mochasta2_anova_bf_1e98d7c1|branch|f1255c07d7ca95f1|389f66241f005792|7c07701a3db73078|-1064826834||t19706.9701849882s|bff121ceb628206b|4867|rds|local|list|mochasta2_anova_bf||8919.523|data coerced from tibble to data frame|
+mochasta2_anova_bf_215e91ce|branch|17b31b837d12a87a|389f66241f005792|7c07701a3db73078|-1352871958||t19706.9012937149s|bdc13c2d69aecb64|4866|rds|local|list|mochasta2_anova_bf||30953.879|data coerced from tibble to data frame|
+mochasta2_anova_bf_4aafdf09|branch|5f9cd8097f929454|389f66241f005792|7c07701a3db73078|1915727663||t19706.8700880368s|4f12b392d38a3cf9|4858|rds|local|list|mochasta2_anova_bf||28257.621|data coerced from tibble to data frame|
+mochasta2_anova_bf_5df8ab36|branch|3f7f9ba80908bc12|389f66241f005792|7c07701a3db73078|683703709||t19706.8690240832s|3dfcba9049b9c958|4863|rds|local|list|mochasta2_anova_bf||28165.704|data coerced from tibble to data frame|
+mochasta2_anova_bf_a37ea7b6|branch|584d3271f3710226|389f66241f005792|7c07701a3db73078|684200579||t19706.8821274286s|a99e4bcf527630b7|4857|rds|local|list|mochasta2_anova_bf||29298.278|data coerced from tibble to data frame|
+mochasta2_anova_bf_bde6ffcb|branch|56ecb1d5579837c3|389f66241f005792|7c07701a3db73078|1344772570||t19706.8669451118s|a9e05a6e902d5af6|4860|rds|local|list|mochasta2_anova_bf||27986.139|data coerced from tibble to data frame|
+mochasta2_anova_bf_db8fa101|branch|33566c7cf892a652|389f66241f005792|7c07701a3db73078|716565383||t19706.8913333937s|e23fec98ebdb5bdc|4861|rds|local|list|mochasta2_anova_bf||30093.342|data coerced from tibble to data frame|
+mochasta2_anova_bf_f7281ad7|branch|93546a17c7ac2e62|389f66241f005792|7c07701a3db73078|1568833176||t19706.8707978177s|a9e05a6e902d5af6|4860|rds|local|list|mochasta2_anova_bf||28319.326|data coerced from tibble to data frame|
+mochasta2_anova_models|stem|170eb51baef85dda|428e7d0e082b54bc|96ceb7f08af42e9e|854771886||t19704.8206467805s|5529749806a42e69|653|rds|local|vector||mochasta2_anova_models_63482633*mochasta2_anova_models_5dcecc13*mochasta2_anova_models_2e92347a*mochasta2_anova_models_5ee5a28c*mochasta2_anova_models_fb6171e3*mochasta2_anova_models_e44b6ce3*mochasta2_anova_models_18d97bd4*mochasta2_anova_models_fbcf78b3|0.03||
+mochasta2_lmm|stem|92235fc921aa93ac|738e39576cb00c7c|7c07701a3db73078|1334306399||t19704.8219211472s|0a7aa2c6597a0a9d|727196|rds|local|vector|||108.168|Model failed to converge with 2 negative eigenvalues 4.7e03 8.9e00|
+mochasta2_no_position|stem|996caab1d9b0b3ad|699766911ce9fe35|7c07701a3db73078|1404452198||t19704.8206558547s|21a2bce103388539|1461|rds|local|vector|||0.024||
+mochasta2_simple_effects_bf|stem|eabea6850b9a3e10|699001fee4ccb11d|31be0ff6fe30b849|-862119223||t19704.8206587251s|7109262deedf9325|229|rds|local|vector|||0.044||
+mochasta2_simple_effects_spatial|stem|cb5526a09d9a9040|6a81687ee49a2b8d|31be0ff6fe30b849|339468056||t19704.8206616418s|0e4a824ef88cc018|8062|rds|local|vector|||0.017||
+mochasta2_simple_effects_verbal|stem|b9ea4970fb1af43d|9413bfd1250025ae|31be0ff6fe30b849|-1225459199||t19704.8206645122s|92e677a1e69099bb|8075|rds|local|vector|||0.018||
 project_packages|object|e5d604c5a9edfd7c|||||||||||||||
-report|stem|d0844c63ebb91d4f|b3d9bbe7e145e3a1|bdc3c4201b38d8d6|-237041703|mochasta2/results/analysis2.html*mochasta2/results/analysis2.qmd|t19696.9510557436s|0c363d2e837ac44f|1753696|file|local|vector|||8.972||
+report|stem|91a87bf6ebcf7b4b|b3d9bbe7e145e3a1|113d60cea236c7fb|-237041703|mochasta2/results/analysis2.html*mochasta2/results/analysis2.qmd|t19706.9702386463s|97a051f7b0912afc|1753706|file|local|vector|||4.523||

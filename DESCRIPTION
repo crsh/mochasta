@@ -16,4 +16,12 @@ Config/testthat/edition: 3
 Imports: 
     rlang,
     tarchetypes,
-    targets
+    targets,
+    crew,
+    formula.tools,
+    dplyr,
+    tidyr,
+    afex,
+    lme4,
+    emmeans,
+    BayesFactor

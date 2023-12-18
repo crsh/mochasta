@@ -30,7 +30,7 @@ options(tidyverse.quiet = TRUE)
 
 tar_option_set(
   packages = project_packages
-  , controller = crew_controller_local(workers = 4)
+  , controller = crew_controller_local(workers = 7)
   , storage = "main"
   , retrieval = "main"
   , memory = "transient"
@@ -126,7 +126,7 @@ list(
         , data = mochasta1
         , whichRandom = "id"
         # , method = "laplace"
-        , iterations = 1e5
+        # , iterations = 5e4
       )
     }
     , pattern = map(mochasta1_anova_models)
@@ -177,7 +177,7 @@ list(
         , data = mochasta1_no_order
         , whichRandom = "id"
         # , method = "laplace"
-        , iterations = 1e5
+        # , iterations = 5e4
       )
     }
     , pattern = map(mochasta1_no_order_anova_models)
@@ -217,7 +217,7 @@ list(
         , data = mochasta1_no_order_position
         , whichRandom = "id"
         # , method = "laplace"
-        , iterations = 1e5
+        # , iterations = 5e4
       )
     }
     , pattern = map(mochasta1_no_order_position_anova_models)

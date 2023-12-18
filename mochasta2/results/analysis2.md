@@ -1,7 +1,7 @@
 ---
 title: "Analysis of Experiment 2"
 author: "Frederik Aust"
-date: "2023-12-05"
+date: "2023-12-16"
 
 toc: true
 number-sections: true
@@ -91,15 +91,15 @@ tar_read(mochasta2_anova_bf) |>
 ::: {.cell-output .cell-output-stdout}
 ```
 # A tibble: 7 × 3
-  term                       bf error
-  <chr>                   <dbl> <dbl>
-1 sound               2.62e+  5    NA
-2 task                8.82e+  0    NA
-3 position            4.23e+120    NA
-4 sound:task          2.47e+  2    NA
-5 position:sound      6.31e-  2    NA
-6 position:task       2.41e+  0    NA
-7 position:sound:task 8.54e-  2    NA
+  term                       bf  error
+  <chr>                   <dbl>  <dbl>
+1 sound               2.76e+  5 0.0553
+2 task                1.56e+  1 0.0437
+3 position            6.88e+120 0.0493
+4 sound:task          2.82e+  2 0.0446
+5 position:sound      6.16e-  2 0.0939
+6 position:task       2.41e+  0 0.0997
+7 position:sound:task 8.46e-  2 0.105 
 ```
 :::
 :::
