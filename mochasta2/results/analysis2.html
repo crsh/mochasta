@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Frederik Aust">
-<meta name="dcterms.date" content="2023-12-16">
+<meta name="dcterms.date" content="2023-12-22">
 
 <title>Analysis of Experiment 2</title>
 <style>
@@ -3051,7 +3051,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 16, 2023</p>
+      <p class="date">December 22, 2023</p>
     </div>
   </div>
   
@@ -3125,13 +3125,65 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 7 position:sound:task 8.46e-  2 0.105 </code></pre>
 </div>
 </div>
+<p>Results for Bayesian meta-Analysis</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_read</span>(mochasta2_anova_verbal)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Anova Table (Type 3 tests)
+
+Response: pos_total
+          Effect           df  MSE          F  pes p.value
+1          sound 1.95, 122.94 7.89  32.08 *** .337   &lt;.001
+2       position 2.84, 178.79 8.67 102.89 *** .620   &lt;.001
+3 sound:position 7.64, 481.35 3.00     2.43 * .037    .016
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;+&#39; 0.1 &#39; &#39; 1
+
+Sphericity correction method: GG </code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_read</span>(mochasta2_anova_spatial)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Anova Table (Type 3 tests)
+
+Response: pos_total
+          Effect           df   MSE         F  pes p.value
+1          sound 1.87, 117.89 10.77      0.56 .009    .560
+2       position 2.23, 140.80 13.32 53.97 *** .461   &lt;.001
+3 sound:position 8.30, 522.99  3.23    1.71 + .026    .089
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;+&#39; 0.1 &#39; &#39; 1
+
+Sphericity correction method: GG </code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_read</span>(mochasta2_no_position_anova)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Anova Table (Type 3 tests)
+
+Response: pos_total
+      Effect     df   MSE         F  pes p.value
+1       task 1, 126 19.92   6.85 ** .052    .010
+2      sound 1, 126  1.14 22.47 *** .151   &lt;.001
+3 task:sound 1, 126  1.14 12.49 *** .090   &lt;.001
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;+&#39; 0.1 &#39; &#39; 1</code></pre>
+</div>
+</div>
 </section>
 <section id="simple-effects-of-state-changes-per-task-modalitiy" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Simple effects of state changes per task modalitiy</h1>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_read</span>(mochasta2_simple_effects_spatial)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_read</span>(mochasta2_simple_effects_spatial)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Anova Table (Type 3 tests)
@@ -3144,7 +3196,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;+&
 </div>
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_read</span>(mochasta2_simple_effects_verbal)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_read</span>(mochasta2_simple_effects_verbal)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Anova Table (Type 3 tests)
@@ -3157,14 +3209,13 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;+&
 </div>
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_read</span>(mochasta2_simple_effects_bf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tar_read</span>(mochasta2_simple_effects_bf) <span class="sc">|&gt;</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  papaja<span class="sc">::</span><span class="fu">apa_num</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 2
-  task           bf
-  &lt;fct&gt;       &lt;dbl&gt;
-1 spatial     0.194
-2 verbal  73914.   </code></pre>
+<pre><code>     task        bf error
+1 spatial      0.26  0.01
+2  verbal 56,219.66  0.01</code></pre>
 </div>
 </div>
 </section>

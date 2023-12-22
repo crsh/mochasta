@@ -93,6 +93,15 @@ tar_read(mochasta1_no_order_anova_bf) |>
   bf_table()
 ```
 
+Results for Bayesian meta-Analysis
+
+```{r}
+#| label: anova-no-order-meta
+
+tar_read(mochasta1_no_order_anova_verbal)
+tar_read(mochasta1_no_order_anova_spatial)
+```
+
 # ANOVA collapsing across order and position
 
 ANOVA: 2 (sound condition: steady, changing) x 2 (task modality)

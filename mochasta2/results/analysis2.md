@@ -1,7 +1,7 @@
 ---
 title: "Analysis of Experiment 2"
 author: "Frederik Aust"
-date: "2023-12-16"
+date: "2023-12-22"
 
 toc: true
 number-sections: true
@@ -105,6 +105,71 @@ tar_read(mochasta2_anova_bf) |>
 :::
 
 
+Results for Bayesian meta-Analysis
+
+
+::: {.cell}
+
+```{.r .cell-code}
+tar_read(mochasta2_anova_verbal)
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+Anova Table (Type 3 tests)
+
+Response: pos_total
+          Effect           df  MSE          F  pes p.value
+1          sound 1.95, 122.94 7.89  32.08 *** .337   <.001
+2       position 2.84, 178.79 8.67 102.89 *** .620   <.001
+3 sound:position 7.64, 481.35 3.00     2.43 * .037    .016
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '+' 0.1 ' ' 1
+
+Sphericity correction method: GG 
+```
+:::
+
+```{.r .cell-code}
+tar_read(mochasta2_anova_spatial)
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+Anova Table (Type 3 tests)
+
+Response: pos_total
+          Effect           df   MSE         F  pes p.value
+1          sound 1.87, 117.89 10.77      0.56 .009    .560
+2       position 2.23, 140.80 13.32 53.97 *** .461   <.001
+3 sound:position 8.30, 522.99  3.23    1.71 + .026    .089
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '+' 0.1 ' ' 1
+
+Sphericity correction method: GG 
+```
+:::
+
+```{.r .cell-code}
+tar_read(mochasta2_no_position_anova)
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+Anova Table (Type 3 tests)
+
+Response: pos_total
+      Effect     df   MSE         F  pes p.value
+1       task 1, 126 19.92   6.85 ** .052    .010
+2      sound 1, 126  1.14 22.47 *** .151   <.001
+3 task:sound 1, 126  1.14 12.49 *** .090   <.001
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '+' 0.1 ' ' 1
+```
+:::
+:::
+
+
 
 # Simple effects of state changes per task modalitiy
 
@@ -144,16 +209,15 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '+' 0.1 ' ' 1
 :::
 
 ```{.r .cell-code}
-tar_read(mochasta2_simple_effects_bf)
+tar_read(mochasta2_simple_effects_bf) |>
+  papaja::apa_num()
 ```
 
 ::: {.cell-output .cell-output-stdout}
 ```
-# A tibble: 2 × 2
-  task           bf
-  <fct>       <dbl>
-1 spatial     0.194
-2 verbal  73914.   
+     task        bf error
+1 spatial      0.26  0.01
+2  verbal 56,219.66  0.01
 ```
 :::
 :::

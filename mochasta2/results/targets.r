@@ -99,6 +99,34 @@ list(
     , packages = c("afex")
   )
   , tar_target(
+    mochasta2_anova_verbal
+    , {
+      aov_ez(
+        id = "id"
+        , dv = "pos_total"
+        , data = filter(mochasta2, task == "verbal")
+        , within = c("sound", "position")
+        , anova_table = list(correction = "GG", es = "pes")
+      )
+    }
+    , deployment = "main"
+    , packages = c("afex")
+  )
+  , tar_target(
+    mochasta2_anova_spatial
+    , {
+      aov_ez(
+        id = "id"
+        , dv = "pos_total"
+        , data = filter(mochasta2, task == "spatial")
+        , within = c("sound", "position")
+        , anova_table = list(correction = "GG", es = "pes")
+      )
+    }
+    , deployment = "main"
+    , packages = c("afex")
+  )
+  , tar_target(
     mochasta2_anova_models
     , list_type3_models(
       pos_total ~ sound*task*position + sound*position*id -
@@ -133,6 +161,21 @@ list(
     }
     , deployment = "main"
     , packages = c("lme4")
+  )
+  , tar_target(
+    mochasta2_no_position_anova
+    , {
+      aov_ez(
+        id = "id"
+        , dv = "pos_total"
+        , data = filter(mochasta2_no_position, sound != "quiet")
+        , within = "sound"
+        , between = "task"
+        , anova_table = list(correction = "GG", es = "pes")
+      )
+    }
+    , deployment = "main"
+    , packages = c("afex", "dplyr")
   )
 
   # ANOVA: breakdown of changing-state effect by task modality
@@ -170,12 +213,12 @@ list(
     mochasta2_simple_effects_bf
     , {
       mochasta2_no_position |>
-        pivot_wider(names_from = "sound", values_from = "pos_total") |>
-        group_by(task) |>
-        summarize(
-          bf = ttestBF(steady, changing, paired = TRUE) |>
-            as.vector()
-        )
+        group_by(task) %>%
+        do(
+          anovaBF(pos_total ~ sound + id, data = ., whichRandom = "id", iterations = 50000, rscaleFixed = 0.5, rscaleRandom = 1) |>
+            extractBF()
+        ) |>
+        select(bf, error)
     }
     , deployment = "main"
     , packages = c("tidyr", "dplyr", "BayesFactor")

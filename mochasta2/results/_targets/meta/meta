@@ -1,5 +1,5 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-.Random.seed|object|0fb7bfd337a71c7e|||||||||||||||
+.Random.seed|object|49fa68258985a40b|||||||||||||||
 list_type3_models|function|5c80861282e2951f|||||||||||||||
 mochasta2|stem|6ff6f506ddf5ea48|c51df277ab2b1725|ef46db3751d8e999|-1183851396||t19704.8206426601s|3c64c759cb141eb1|4150|rds|local|vector|||1.112||
 mochasta2_anova|stem|10de990007c3b6c3|aaee3a86219fd1b7|7c07701a3db73078|1883054104||t19704.8206450213s|297edfe53acc2a14|106744|rds|local|vector|||0.037||
@@ -13,10 +13,13 @@ mochasta2_anova_bf_bde6ffcb|branch|56ecb1d5579837c3|389f66241f005792|7c07701a3db
 mochasta2_anova_bf_db8fa101|branch|33566c7cf892a652|389f66241f005792|7c07701a3db73078|716565383||t19706.8913333937s|e23fec98ebdb5bdc|4861|rds|local|list|mochasta2_anova_bf||30093.342|data coerced from tibble to data frame|
 mochasta2_anova_bf_f7281ad7|branch|93546a17c7ac2e62|389f66241f005792|7c07701a3db73078|1568833176||t19706.8707978177s|a9e05a6e902d5af6|4860|rds|local|list|mochasta2_anova_bf||28319.326|data coerced from tibble to data frame|
 mochasta2_anova_models|stem|170eb51baef85dda|428e7d0e082b54bc|96ceb7f08af42e9e|854771886||t19704.8206467805s|5529749806a42e69|653|rds|local|vector||mochasta2_anova_models_63482633*mochasta2_anova_models_5dcecc13*mochasta2_anova_models_2e92347a*mochasta2_anova_models_5ee5a28c*mochasta2_anova_models_fb6171e3*mochasta2_anova_models_e44b6ce3*mochasta2_anova_models_18d97bd4*mochasta2_anova_models_fbcf78b3|0.03||
+mochasta2_anova_spatial|stem|acb13a78eb3f85f8|2a93d361c9fbb934|7c07701a3db73078|910278442||t19712.9966620107s|8cd32a2b1214b4e5|45956|rds|local|vector|||0.032||
+mochasta2_anova_verbal|stem|8b8e1c20a30f20b0|05a2574fb48b32a0|7c07701a3db73078|-766046627||t19712.9966636774s|cc220cb651fef4ba|43745|rds|local|vector|||0.015||
 mochasta2_lmm|stem|92235fc921aa93ac|738e39576cb00c7c|7c07701a3db73078|1334306399||t19704.8219211472s|0a7aa2c6597a0a9d|727196|rds|local|vector|||108.168|Model failed to converge with 2 negative eigenvalues 4.7e03 8.9e00|
 mochasta2_no_position|stem|996caab1d9b0b3ad|699766911ce9fe35|7c07701a3db73078|1404452198||t19704.8206558547s|21a2bce103388539|1461|rds|local|vector|||0.024||
-mochasta2_simple_effects_bf|stem|eabea6850b9a3e10|699001fee4ccb11d|31be0ff6fe30b849|-862119223||t19704.8206587251s|7109262deedf9325|229|rds|local|vector|||0.044||
+mochasta2_no_position_anova|stem|9b147250d59936b6|14c2e4b5a3c22194|31be0ff6fe30b849|-55911914||t19713.0183646946s|876234490739e9df|20551|rds|local|vector|||0.953||
+mochasta2_simple_effects_bf|stem|aa085dfb7af79e93|f66892fd67c5237f|31be0ff6fe30b849|-862119223||t19712.6098398494s|ee143e4c8ea21b7d|350|rds|local|vector|||6.169|data coerced from tibble to data frame. data coerced from tibble to data frame|
 mochasta2_simple_effects_spatial|stem|cb5526a09d9a9040|6a81687ee49a2b8d|31be0ff6fe30b849|339468056||t19704.8206616418s|0e4a824ef88cc018|8062|rds|local|vector|||0.017||
 mochasta2_simple_effects_verbal|stem|b9ea4970fb1af43d|9413bfd1250025ae|31be0ff6fe30b849|-1225459199||t19704.8206645122s|92e677a1e69099bb|8075|rds|local|vector|||0.018||
 project_packages|object|e5d604c5a9edfd7c|||||||||||||||
-report|stem|91a87bf6ebcf7b4b|b3d9bbe7e145e3a1|113d60cea236c7fb|-237041703|mochasta2/results/analysis2.html*mochasta2/results/analysis2.qmd|t19706.9702386463s|97a051f7b0912afc|1753706|file|local|vector|||4.523||
+report|stem|8f97ce43a345bdf7|281ac5ae59f422db|83b2d18877d8178c|-237041703|mochasta2/results/analysis2.html*mochasta2/results/analysis2.qmd|t19713.0184218248s|d933c090105d195a|1756775|file|local|vector|||4.565||

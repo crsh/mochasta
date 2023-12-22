@@ -76,6 +76,16 @@ tar_read(mochasta2_anova_bf) |>
   bf_table()
 ```
 
+Results for Bayesian meta-Analysis
+
+```{r}
+#| label: anova-no-order-meta
+
+tar_read(mochasta2_anova_verbal)
+tar_read(mochasta2_anova_spatial)
+tar_read(mochasta2_no_position_anova)
+```
+
 
 # Simple effects of state changes per task modalitiy
 
@@ -84,6 +94,7 @@ tar_read(mochasta2_anova_bf) |>
 
 tar_read(mochasta2_simple_effects_spatial)
 tar_read(mochasta2_simple_effects_verbal)
-tar_read(mochasta2_simple_effects_bf)
+tar_read(mochasta2_simple_effects_bf) |>
+  papaja::apa_num()
 ```
 

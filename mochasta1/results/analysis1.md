@@ -1,7 +1,7 @@
 ---
 title: "Analysis of Experiment 1"
 author: "Frederik Aust"
-date: "2023-12-13"
+date: "2023-12-22"
 
 toc: true
 number-sections: true
@@ -207,6 +207,53 @@ tar_read(mochasta1_no_order_anova_bf) |>
 :::
 
 
+Results for Bayesian meta-Analysis
+
+
+::: {.cell}
+
+```{.r .cell-code}
+tar_read(mochasta1_no_order_anova_verbal)
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+Anova Table (Type 3 tests)
+
+Response: pos_total
+          Effect           df   MSE          F  pes p.value
+1          sound 1.97, 124.34  8.19  19.06 *** .232   <.001
+2       position 2.81, 176.80 11.32 173.32 *** .733   <.001
+3 sound:position 8.54, 537.98  3.14    2.86 ** .043    .003
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '+' 0.1 ' ' 1
+
+Sphericity correction method: GG 
+```
+:::
+
+```{.r .cell-code}
+tar_read(mochasta1_no_order_anova_spatial)
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+Anova Table (Type 3 tests)
+
+Response: pos_total
+          Effect           df   MSE         F  pes p.value
+1          sound 1.91, 120.24 12.02      0.30 .005    .734
+2       position 3.15, 198.75  9.46 76.68 *** .549   <.001
+3 sound:position 8.82, 555.45  3.07      1.54 .024    .132
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '+' 0.1 ' ' 1
+
+Sphericity correction method: GG 
+```
+:::
+:::
+
+
 # ANOVA collapsing across order and position
 
 ANOVA: 2 (sound condition: steady, changing) x 2 (task modality)
@@ -314,11 +361,12 @@ tar_read(mochasta1_simple_effects_bf)
 
 ::: {.cell-output .cell-output-stdout}
 ```
-# A tibble: 2 × 2
-  task         bf
-  <fct>     <dbl>
-1 spatial   0.187
-2 verbal  383.   
+# A tibble: 2 × 3
+# Groups:   task [2]
+  task         bf   error
+  <fct>     <dbl>   <dbl>
+1 spatial   0.249 0.00591
+2 verbal  354.    0.00973
 ```
 :::
 :::

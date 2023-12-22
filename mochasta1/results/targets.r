@@ -150,6 +150,34 @@ list(
     , packages = c("afex")
   )
   , tar_target(
+    mochasta1_no_order_anova_verbal
+    , {
+      aov_ez(
+        id = "id"
+        , dv = "pos_total"
+        , data = filter(mochasta1_no_order, task == "verbal")
+        , within = c("sound", "position")
+        , anova_table = list(correction = "GG", es = "pes")
+      )
+    }
+    , deployment = "main"
+    , packages = c("afex")
+  )
+  , tar_target(
+    mochasta1_no_order_anova_spatial
+    , {
+      aov_ez(
+        id = "id"
+        , dv = "pos_total"
+        , data = filter(mochasta1_no_order, task == "spatial")
+        , within = c("sound", "position")
+        , anova_table = list(correction = "GG", es = "pes")
+      )
+    }
+    , deployment = "main"
+    , packages = c("afex")
+  )
+  , tar_target(
     mochasta1_no_order_lmm
     , {
       lmer(
@@ -260,12 +288,12 @@ list(
     mochasta1_simple_effects_bf
     , {
       mochasta1_no_order_position |>
-        pivot_wider(names_from = "sound", values_from = "pos_total") |>
-        group_by(task) |>
-        summarize(
-          bf = ttestBF(steady, changing, paired = TRUE) |>
-            as.vector()
-        )
+        group_by(task) %>%
+        do(
+          anovaBF(pos_total ~ sound + id, data = ., whichRandom = "id", iterations = 50000, rscaleFixed = 0.5, rscaleRandom = 1) |>
+            extractBF()
+        ) |>
+        select(bf, error)
     }
     , deployment = "main"
     , packages = c("tidyr", "dplyr", "BayesFactor")
