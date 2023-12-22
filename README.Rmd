@@ -2,92 +2,26 @@
 output: github_document
 ---
 
-# Paper title
+# Changing-State Irrelevant Speech Disrupts Visual-Verbal but not Visual-Spatial Serial Recall
 
-`r template::author_from_desc()`
-Affiliation
+John E. Marsh, Mark J. Hurlstone, Alexandre Marois, Linden J. Ball, Stuart B. Moore, François Vachon, Sabine J. Schlittmeier, Jan Philipp Röer, Axel Buchner, and Raoul Bell
 
 ---
-Abstract
----
-
 
 This repository contains research products associated with the publication.
-We provide the experimental software and stimulus material that we are permitted to share in the `...` directory.
-The R Markdown files in the `...` directory contain details about the analyses reported in the paper, as well as instructions on how to rerun the analysis to reproduce the results.
-With the help of the R package `rmarkdown` the files can be rendered into the accepted version of the manuscript in `PDF`-format.
-The `.../data_raw/` directory contains all the raw data as originally recoreded; merged and processed data files can be found in `.../data_processed/`.
-The postprint of the published article can be found at `...`.
-
-
-## Publication (recommended citation)
-
-`r `
-
-## Dataset description
-
-Data were collected at the lab of ...
-
-| Study        | Data collection period  |
-| ------------ | ----------------------- |
-| Stud1        | YYYY-MM-DD - YYYY-MM-DD |
-
-
-Descriptions of the data collection methods are provided in the study protocol and research report.
-Processed data are provided `RDS`-format, which can be readily imported into R using `loadRDS()`.
-Details about the data processing steps are available in the R Markdown files in `...`.
-
+The `data_raw` directory contains the data in CSV format; RData-files can be found in `data_processed/`.
+The analyses were performed with the R package [**targets**](https://cran.r-project.org/web/packages/targets/index.html) and can be rerun by executing the file `_make.sh`.
+*Note that rerunning the analyses may take several days (see below).*
+It is not necessary to install the **mochasta** package contained in this repository!
+The analyses are run separately for each study and the results are stored in the directories `mochasta1/_targets/` and `mochasta2/_targets/`.
+To run the analysis for Experiment one set the `project` variable in `_make.sh` to `mochasta1` (and analogously for Experiment 2).
+The Quarto files in the directories `mochasta1` and `mochasta2` create reports of the results of the analyses reported in the paper.
 
 ## Software requirements
 
-### Experimental software
+Packages required to reproduce the anlysis are listed in the `DESCRIPTION` file.
 
-The experiment was programmed using [OpenSesame](http://osdoc.cogsci.nl/). See the respective README documents in the Material subdirectories for additional information.
+## Computational requirements
 
-### Analyses
-
-Analyses were originally run on Ubuntu ... using R ... .
-
-To install `papaja` please review the [installation instructions](https://github.com/crsh/papaja#installation).
-
-
-## Acknowledgements
-...
-
-
-## Funding
-...
-
-
-## Licensing information
-
-| Material              | License                                                      |
-| --------------------- | ------------------------------------------------------------ |
-| Stimulus material     | [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/)     |
-| Experimental software | [MIT](http://opensource.org/licenses/MIT) `r format(Sys.Date(), "%Y")` `r template::author_from_desc()` |
-| Data                  | [CC-0](http://creativecommons.org/publicdomain/zero/1.0/) attribution requested in reuse |
-| Analysis code         | [MIT](http://opensource.org/licenses/MIT) `r format(Sys.Date(), "%Y")` `r template::author_from_desc()` |
-| Manuscript            | [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/)     |
-
-
-## Contact
-
-Frederik Aust
-
-Psychological Methods Group
-Psychology Department
-University of Amsterdam
-
-Nieuwe Achtergracht 129-B
-1018 WT Amsterdam
-The Netherlands
-
-f.aust@uva.nl
-
-
-## File list
-
-```{r list-files}
-cat(list.files(path = ".", recursive = TRUE), sep = "\n")
-```
-
+Running all analyses may take severa on a Desktop computer even when Bayesian models are fit in parallel on 7 cores (current setting).
+To control the number of cores used for parallel processing, change the **targets** `controller` option in `targets.r` in the folders for each experiment. 

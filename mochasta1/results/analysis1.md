@@ -1,5 +1,5 @@
 ---
-title: "Analysis of Experiment 1"
+title: "Results for Experiment 1"
 author: "Frederik Aust"
 date: "2023-12-22"
 

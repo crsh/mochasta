@@ -18,10 +18,7 @@ project_packages <- c(
 
 # Make custom functions available -----------------------------------------
 
-source("./R/list_type3_models.R")
-
- # roxygen2::roxygenise()
-# devtools::install(pkg = ".", upgrade = "never")
+source("./R/type3_bf.R")
 
 
 # Configure plan execution ------------------------------------------------
@@ -38,25 +35,6 @@ tar_option_set(
   , error = "continue"
   , workspace_on_error = TRUE
 )
-
-## Remote parallelized execution
-# library("future")
-
-# Sys.setenv(
-#   PATH = paste0(
-#     Sys.getenv("PATH")
-#     , ":/usr/lib/rstudio-server/bin/postback"
-#   )
-# )
-
-# methexp_labor_cluster <- methexp::methexp_cluster(
-#   master = "134.95.17.37"
-#   , user = "computer"
-#   , servants = c(paste0("134.95.17.", 62:64), "localhost")
-#   , cores = 1L
-# )
-
-# future::plan(future::cluster, workers = methexp_labor_cluster)
 
 
 # Define plan -------------------------------------------------------------

@@ -1,5 +1,5 @@
 ---
-title: "Analysis of Experiment 1"
+title: "Results for Experiment 1"
 author: "Frederik Aust"
 date: "`r Sys.Date()`"
 
@@ -32,32 +32,7 @@ library("targets")
 library("BayesFactor")
 library("dplyr")
 
-tested_terms <- function(x, denominator = length(x)) {
-  lapply(
-    x@numerator
-    , \(y) {
-      BayesFactor:::whichOmitted(
-        y
-        , x@denominator
-      )
-    }
-  ) |>
-  unlist(use.names = FALSE)
-}
-
-bf_table <- function(x) {
-  x <-  do.call(c, args = x)
-  
-  x <- x[-length(x)] / x[length(x)]
-
-  extractBF(x, logbf = TRUE) |>
-    tibble() |>
-    mutate(
-      term = tested_terms(x)
-      , bf = exp(-bf)
-    ) |>
-    select(term, bf, error)
-}
+source("../../R/type3_bf.R")
 ```
 
 # Full ANOVA

@@ -1,5 +1,6 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-.Random.seed|object|49fa68258985a40b|||||||||||||||
+.Random.seed|object|1451a9be7c2b5dcf|||||||||||||||
+bf_table|function|c8f1df648845568c|||||||||||||||
 list_type3_models|function|5c80861282e2951f|||||||||||||||
 mochasta2|stem|6ff6f506ddf5ea48|c51df277ab2b1725|ef46db3751d8e999|-1183851396||t19704.8206426601s|3c64c759cb141eb1|4150|rds|local|vector|||1.112||
 mochasta2_anova|stem|10de990007c3b6c3|aaee3a86219fd1b7|7c07701a3db73078|1883054104||t19704.8206450213s|297edfe53acc2a14|106744|rds|local|vector|||0.037||
@@ -22,4 +23,5 @@ mochasta2_simple_effects_bf|stem|aa085dfb7af79e93|f66892fd67c5237f|31be0ff6fe30b
 mochasta2_simple_effects_spatial|stem|cb5526a09d9a9040|6a81687ee49a2b8d|31be0ff6fe30b849|339468056||t19704.8206616418s|0e4a824ef88cc018|8062|rds|local|vector|||0.017||
 mochasta2_simple_effects_verbal|stem|b9ea4970fb1af43d|9413bfd1250025ae|31be0ff6fe30b849|-1225459199||t19704.8206645122s|92e677a1e69099bb|8075|rds|local|vector|||0.018||
 project_packages|object|e5d604c5a9edfd7c|||||||||||||||
-report|stem|8f97ce43a345bdf7|281ac5ae59f422db|83b2d18877d8178c|-237041703|mochasta2/results/analysis2.html*mochasta2/results/analysis2.qmd|t19713.0184218248s|d933c090105d195a|1756775|file|local|vector|||4.565||
+report|stem|8f97ce43a345bdf7|281ac5ae59f422db|83b2d18877d8178c|-237041703|mochasta2/results/analysis2.html*mochasta2/results/analysis2.qmd|t19713.0184218248s||1756775|file|local|vector|||3.012||System command quarto failed
+tested_terms|function|782ba1f191aa18a9|||||||||||||||
