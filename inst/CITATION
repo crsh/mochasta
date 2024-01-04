@@ -1,11 +1,8 @@
 bibentry(
   bibtype  = "Article",
-  title    = ,
-  author   = ,
-  journal  = ,
-  year     = ,
-  volume   = ,
-  number   = ,
-  pages    = ,
-  doi      =
+  title    = "Changing-State Irrelevant Speech Disrupts Visual-Verbal but not Visual-Spatial Serial Recall",
+  author   = "John E. Marsh, Mark J. Hurlstone, Alexandre Marois, Linden J. Ball, Stuart B. Moore, François Vachon, Sabine J. Schlittmeier, Jan Philipp Röer, Axel Buchner, Frederik Aust and Raoul Bell",
+  journal  = "Journal of Experimental Psychology: Leaning, Memory and Cognition",
+  year     = "2024",
+  doi      = ""
 )

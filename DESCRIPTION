@@ -1,12 +1,35 @@
 Package: mochasta
-Title: R package accompanying "Changing-State Irrelevant Speech Disrupts Visual-Verbal but not Visual-Spatial Serial Recall"
-Version: 0.0.0.9000
-Authors@R: 
-    person("Frederik", "Aust", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0003-4900-788X"))
-Description: This package contains data and functions to reproduce the
-    analyses reported in the article "Changing-State Irrelevant Speech
-    Disrupts Visual-Verbal but not Visual-Spatial Serial Recall."
+Title: Changing-State Irrelevant Speech Disrupts Visual-Verbal but not 
+    Visual-Spatial Serial Recall
+Version: 1.0.0
+Authors@R: c(
+        person("John E.", "Marsh", role = c("aut", "cre"),
+            comment = c(ORCID = "0000-0002-9494-1287"),
+            email = "jemarsh@uclan.ac.uk"),
+        person("Mark J.", "Hurlstone", role = c("aut"),
+            comment = c(ORCID = "0000-0001-9920-6284")),
+        person("Alexandre", "Marois", role = c("aut"),
+            comment = c(ORCID = "0000-0002-4127-4134")),
+        person("Linden J.", "Ball", role = c("aut"),
+            comment = c(ORCID = "0000-0002-5099-0124")),
+        person("Stuart B.", "Moore", role = c("aut"),
+            comment = c(ORCID = "0000-0002-0747-9304")),
+        person("François", "Vachon", role = c("aut"),
+            comment = c(ORCID = "0000-0001-5282-6048")),
+        person("Sabine J.", "Schlittmeier", role = c("aut"),
+            comment = c(ORCID = "0000-0001-9051-4547")),
+        person("Jan Philipp", "Röer", role = c("aut"),
+            comment = c(ORCID = "0000-0001-7774-3433")),
+        person("Axel", "Buchner", role = c("aut"),
+            comment = c(ORCID = "0000-0003-4529-3444")),
+        person("Frederik", "Aust", role = c("aut"),
+            comment = c(ORCID = "0000-0003-4900-788X")),
+        person("Raoul", "Bell", role = c("aut"),
+            comment = c(ORCID = "https://orcid.org/0000-0002-0592-0362"))
+    )
+Description: This package contains data and functions to reproduce the analyses 
+    reported in the article "Changing-State Irrelevant Speech Disrupts 
+    Visual-Verbal but not Visual-Spatial Serial Recall".
 License: CC BY 4.0
 Encoding: UTF-8
 Language: en

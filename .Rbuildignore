@@ -4,3 +4,4 @@
 ^_make\.sh$
 ^mochasta\d+$
 ^LICENSE\.md$
+^CITATION\.cff$
