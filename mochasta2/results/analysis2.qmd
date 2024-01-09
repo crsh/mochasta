@@ -51,7 +51,7 @@ tar_read(mochasta2_anova_bf) |>
   bf_table()
 ```
 
-Results for Bayesian meta-Analysis
+# Sliced results for Bayesian meta-analysis
 
 ```{r}
 #| label: anova-no-order-meta

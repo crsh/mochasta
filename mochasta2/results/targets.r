@@ -146,7 +146,7 @@ list(
       aov_ez(
         id = "id"
         , dv = "pos_total"
-        , data = filter(mochasta2_no_position, sound != "quiet")
+        , data = mochasta2_no_position
         , within = "sound"
         , between = "task"
         , anova_table = list(correction = "GG", es = "pes")
@@ -155,6 +155,32 @@ list(
     , deployment = "main"
     , packages = c("afex", "dplyr")
   )
+
+  , tar_target(
+    mochasta2_no_position_anova_models
+    , list_type3_models(
+      pos_total ~ sound*task + id
+      , random = "id"
+    )
+    , deployment = "main"
+    , packages = c("formula.tools")
+  )
+  , tar_target(
+    mochasta2_no_position_anova_bf
+    , {
+      lmBF(
+        mochasta2_no_position_anova_models[[1]]
+        , data = mochasta2_no_position
+        , whichRandom = "id"
+        # , method = "laplace"
+        # , iterations = 5e4
+      )
+    }
+    , pattern = map(mochasta2_no_position_anova_models)
+    , packages = c("BayesFactor")
+    , iteration = "list"
+  )
+
 
   # ANOVA: breakdown of changing-state effect by task modality
   , tar_target(

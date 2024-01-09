@@ -52,7 +52,7 @@ tar_read(mochasta1_anova_bf) |>
 ```
 
 
-# ANOVA collapsing accross order
+# ANOVA collapsing across order
 
 ANOVA: 3 (sound condition) x 2 (task modality) x 7 (serial position)
 
