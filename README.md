@@ -8,19 +8,25 @@ Röer, Axel Buchner, Frederik Aust, & Raoul Bell
 -----
 
 This repository contains research products associated with the
-publication. The `data_raw` directory contains the data in CSV format;
-RData-files can be found in `data_processed/`. The analyses herein were
-performed with the R package
+publication.
+
+The `data_raw` directory contains the data in CSV format; RData-files
+can be found in `data_processed/`.
+
+The analyses herein were performed with the R package
 [**targets**](https://cran.r-project.org/web/packages/targets/index.html)
 and can be rerun by executing the file `_make.sh`. *Note that rerunning
 the analyses may take several days (see below).* The analyses are run
 separately for each study and the results are stored in the directories
 `mochasta1/_targets/` and `mochasta2/_targets/`. To run the analysis for
 Experiment 1 set the `project` variable in `_make.sh` to `mochasta1`
-(and analogously for Experiment 2). The Quarto files in the directories
-`mochasta1` and `mochasta2` create reports of the results of the
-analyses reported in the paper. The Bayesian meta-analysis reported in
-the paper was performed by hand using the online [Bayes factor
+(and analogously for Experiment 2).
+
+The Quarto files in the directories `mochasta1` and `mochasta2` create
+reports of the results of the analyses reported in the paper.
+
+The Bayesian meta-analysis reported in the paper was performed by hand
+using the online [Bayes factor
 calculator](https://users.sussex.ac.uk/~dienes/inference/Bayes.htm) by
 Zoltan Dienes; hence, no code is provided for this analysis.
 
@@ -43,7 +49,7 @@ the **mochasta** package from this GitHub repository.
 # Install the mochasta package from GitHub
 remotes::install_github("crsh/mochasta")
 
-# Install the mochasta package from a local copy of the repository
+# Install from a local copy of the repository
 devtools::install("path/to/mochasta")
 ```
 
