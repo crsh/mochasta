@@ -34,7 +34,10 @@ tar_option_set(
   , garbage_collection = TRUE
   , error = "continue"
   , workspace_on_error = TRUE
+  , cue = tar_cue(seed = FALSE)
 )
+
+tar_option_set(seed = 1)
 
 
 # Define plan -------------------------------------------------------------
@@ -281,7 +284,5 @@ list(
   , tar_quarto(
     report
     , path = "mochasta1/results/analysis1.qmd"
-    , deployment = "main"
-    , quiet = TRUE
   )
 )

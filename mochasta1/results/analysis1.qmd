@@ -32,7 +32,7 @@ library("targets")
 library("BayesFactor")
 library("dplyr")
 
-source("../../R/type3_bf.R")
+library("mochasta")
 ```
 
 # Full ANOVA

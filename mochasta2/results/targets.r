@@ -34,7 +34,10 @@ tar_option_set(
   , garbage_collection = TRUE
   , error = "continue"
   , workspace_on_error = TRUE
+  , cue = tar_cue(seed = FALSE)
 )
+
+tar_option_set(seed = 2)
 
 
 # Define plan -------------------------------------------------------------
@@ -173,7 +176,7 @@ list(
         , data = mochasta2_no_position
         , whichRandom = "id"
         # , method = "laplace"
-        # , iterations = 5e4
+        , iterations = 5e5
       )
     }
     , pattern = map(mochasta2_no_position_anova_models)

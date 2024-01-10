@@ -1,7 +1,7 @@
 ---
-title: "Analysis of Experiment 2"
+title: "Results for Experiment 2"
 author: "Frederik Aust"
-date: "2023-12-22"
+date: "2024-01-10"
 
 toc: true
 number-sections: true
@@ -105,7 +105,70 @@ tar_read(mochasta2_anova_bf) |>
 :::
 
 
-Results for Bayesian meta-Analysis
+# ANOVA collapsing across position
+
+ANOVA: 2 (sound condition: steady, changing) x 2 (task modality)
+
+
+::: {.cell}
+
+```{.r .cell-code}
+mochasta2_no_position_anova <- tar_read(mochasta2_no_position_anova)
+
+mochasta2_no_position_anova
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+Anova Table (Type 3 tests)
+
+Response: pos_total
+      Effect     df   MSE         F  pes p.value
+1       task 1, 126 19.92   6.85 ** .052    .010
+2      sound 1, 126  1.14 22.47 *** .151   <.001
+3 task:sound 1, 126  1.14 12.49 *** .090   <.001
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '+' 0.1 ' ' 1
+```
+:::
+
+```{.r .cell-code}
+mochasta2_no_position_anova$Anova
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+
+Type III Repeated Measures MANOVA Tests: Pillai test statistic
+            Df test stat approx F num Df den Df    Pr(>F)    
+(Intercept)  1   0.77760   440.54      1    126 < 2.2e-16 ***
+task         1   0.05154     6.85      1    126 0.0099660 ** 
+sound        1   0.15135    22.47      1    126  5.67e-06 ***
+task:sound   1   0.09020    12.49      1    126 0.0005725 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+:::
+
+```{.r .cell-code}
+tar_read(mochasta2_no_position_anova_bf) |>
+  bf_table()
+```
+
+::: {.cell-output .cell-output-stdout}
+```
+# A tibble: 3 × 3
+  term            bf  error
+  <chr>        <dbl>  <dbl>
+1 sound      2439.   0.0662
+2 task          4.32 0.0322
+3 sound:task   45.2  0.0349
+```
+:::
+:::
+
+
+# Sliced results for Bayesian meta-analysis
 
 
 ::: {.cell}
@@ -147,24 +210,6 @@ Response: pos_total
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '+' 0.1 ' ' 1
 
 Sphericity correction method: GG 
-```
-:::
-
-```{.r .cell-code}
-tar_read(mochasta2_no_position_anova)
-```
-
-::: {.cell-output .cell-output-stdout}
-```
-Anova Table (Type 3 tests)
-
-Response: pos_total
-      Effect     df   MSE         F  pes p.value
-1       task 1, 126 19.92   6.85 ** .052    .010
-2      sound 1, 126  1.14 22.47 *** .151   <.001
-3 task:sound 1, 126  1.14 12.49 *** .090   <.001
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '+' 0.1 ' ' 1
 ```
 :::
 :::

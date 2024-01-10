@@ -1,7 +1,7 @@
 ---
 title: "Results for Experiment 1"
 author: "Frederik Aust"
-date: "2023-12-22"
+date: "2024-01-10"
 
 toc: true
 number-sections: true
@@ -130,7 +130,7 @@ tar_read(mochasta1_anova_bf) |>
 
 
 
-# ANOVA collapsing accross order
+# ANOVA collapsing across order
 
 ANOVA: 3 (sound condition) x 2 (task modality) x 7 (serial position)
 

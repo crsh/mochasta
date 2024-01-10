@@ -1,5 +1,6 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-.Random.seed|object|46c66a9d7e38984b|||||||||||||||
+.Random.seed|object|0ad108853defd372|||||||||||||||
+bf_table|function|c8f1df648845568c|||||||||||||||
 list_type3_models|function|5c80861282e2951f|||||||||||||||
 mochasta1|stem|4dcbc5705d5032b4|e7502db1fbdd8479|ef46db3751d8e999|-342736700||t19702.6248629938s|f4ce68ac8763c98e|3986|rds|local|vector|||1.047||
 mochasta1_anova|stem|0ad8711de739eb70|f1e668297ac8bc9e|458d03fe1623ba19|1749160624||t19702.6248889662s|a859e561a7e6f293|122621|rds|local|vector|||0.083||
@@ -55,4 +56,5 @@ mochasta1_simple_effects_bf|stem|c5c3251f4e98241f|6bdbe4250e3f8deb|0128801a3aa34
 mochasta1_simple_effects_spatial|stem|5ab16cd65be509d8|d6aa2f787cf9c472|0128801a3aa343eb|-1948432750||t19702.6248983181s|50dd3e8f73c3fcc3|7375|rds|local|vector|||0.011||
 mochasta1_simple_effects_verbal|stem|13d1f5c7a8d06d54|4aae39956c52fe55|0128801a3aa343eb|415898996||t19702.6248799384s|c5c1d3c1ddc4b54c|7218|rds|local|vector|||0.043||
 project_packages|object|e5d604c5a9edfd7c|||||||||||||||
-report|stem|ecec4d78ed3f5401|9172948a1f6f9603|9e3daf8ae285b761|-237041703|mochasta1/results/analysis1.html*mochasta1/results/analysis1.qmd|t19712.995552363s|0d9b417dccfbc8b9|1765986|file|local|vector|||4.615||
+report|stem|9a853d2e8c3e622e|9172948a1f6f9603|9e3daf8ae285b761|687861397|mochasta1/results/analysis1.html*mochasta1/results/analysis1.qmd|t19732.4419718854s|a514db9df58ed79d|1765566|file|local|vector|||4.593||
+tested_terms|function|782ba1f191aa18a9|||||||||||||||

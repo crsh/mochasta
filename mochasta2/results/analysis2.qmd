@@ -32,7 +32,7 @@ library("targets")
 library("BayesFactor")
 library("dplyr")
 
-source("../../R/type3_bf.R")
+library("mochasta")
 ```
 
 # Full ANOVA
@@ -51,6 +51,22 @@ tar_read(mochasta2_anova_bf) |>
   bf_table()
 ```
 
+# ANOVA collapsing across position
+
+ANOVA: 2 (sound condition: steady, changing) x 2 (task modality)
+
+```{r}
+#| label: anova-no-position
+
+mochasta2_no_position_anova <- tar_read(mochasta2_no_position_anova)
+
+mochasta2_no_position_anova
+mochasta2_no_position_anova$Anova
+
+tar_read(mochasta2_no_position_anova_bf) |>
+  bf_table()
+```
+
 # Sliced results for Bayesian meta-analysis
 
 ```{r}
@@ -58,7 +74,6 @@ tar_read(mochasta2_anova_bf) |>
 
 tar_read(mochasta2_anova_verbal)
 tar_read(mochasta2_anova_spatial)
-tar_read(mochasta2_no_position_anova)
 ```
 
 
