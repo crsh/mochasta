@@ -56,17 +56,29 @@ To control the number of cores used for parallel processing, change the **target
 ### Experiment 1
 
 ```{r}
-#| label: mochasta1-dependencies
-#| results: asis
+#| include: false
 
-cat("```mermaid\n")
-tar_mermaid(
+mochasta1_diagram <- tar_mermaid(
   label = c("time", "branches")
   , script = "./mochasta1/results/targets.r"
   , store = "./mochasta1/results/_targets"
   , reporter = "silent"
-) |> 
-  cat(sep = "\n")
+)
+
+mochasta2_diagram <- tar_mermaid(
+  label = c("time", "branches")
+  , script = "./mochasta2/results/targets.r"
+  , store = "./mochasta2/results/_targets"
+  , reporter = "silent"
+)
+```
+
+```{r}
+#| label: mochasta1-dependencies
+#| results: asis
+
+cat("```mermaid\n")
+cat(mochasta1_diagram, sep = "\n")
 cat("\n```")
 ```
 
@@ -77,12 +89,6 @@ cat("\n```")
 #| results: asis
 
 cat("```mermaid\n")
-tar_mermaid(
-  label = c("time", "branches")
-  , script = "./mochasta2/results/targets.r"
-  , store = "./mochasta2/results/_targets"
-  , reporter = "silent"
-) |> 
-  cat(sep = "\n")
+cat(mochasta2_diagram, sep = "\n")
 cat("\n```")
 ```

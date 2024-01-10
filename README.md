@@ -58,7 +58,7 @@ experiment.
 ### Experiment 1
 
 ``` mermaid
--\|/-\|/-\ graph LR
+graph LR
   style Legend fill:#FFFFFF00,stroke:#000000;
   style Graph fill:#FFFFFF00,stroke:#000000;
   subgraph Legend
@@ -119,7 +119,7 @@ experiment.
 ### Experiment 2
 
 ``` mermaid
--\|/-\|/-\ graph LR
+graph LR
   style Legend fill:#FFFFFF00,stroke:#000000;
   style Graph fill:#FFFFFF00,stroke:#000000;
   subgraph Legend
