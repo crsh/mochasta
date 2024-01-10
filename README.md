@@ -32,12 +32,12 @@ Zoltan Dienes; hence, no code is provided for this analysis.
 
 ## Preferred citation
 
-    ## @Article{marshhurlstone:2024,
-    ##   title = {Changing-State Irrelevant Speech Disrupts Visual-Verbal but not Visual-Spatial Serial Recall},
-    ##   author = {John E. Marsh and Mark J. Hurlstone and Alexandre Marois and Linden J. Ball and Stuart B. Moore and François Vachon and Sabine J. Schlittmeier and Jan Philipp Röer and Axel Buchner and Frederik Aust and Raoul Bell},
-    ##   year = {2024},
-    ##   journal = {Journal of Experimental Psychology: Leaning, Memory and Cognition},
-    ## }
+    @Article{marshhurlstone:2024,
+      title = {Changing-State Irrelevant Speech Disrupts Visual-Verbal but not Visual-Spatial Serial Recall},
+      author = {John E. Marsh and Mark J. Hurlstone and Alexandre Marois and Linden J. Ball and Stuart B. Moore and François Vachon and Sabine J. Schlittmeier and Jan Philipp Röer and Axel Buchner and Frederik Aust and Raoul Bell},
+      year = {2024},
+      journal = {Journal of Experimental Psychology: Leaning, Memory and Cognition},
+    }
 
 ## Software requirements
 
